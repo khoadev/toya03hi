@@ -30,17 +30,21 @@ hi('1', '22', '333', '4444') | Hi 1, 22, 333 and 4444!
 #endregion debai
 
 #region bailam
-def hi(name=None):
+def hi(name=None,*args):
+
   if name == None or name == '':
     return f'Hi!'
-  else:
+  if len(args) == 0:
     return f'Hi {name}!'
+  else:
+    strname = f'{name}, '
+    for i,n in enumerate(args):
+      if i == len(args)-1:
+        strname += f'and {n}'
+      else:
+        strname += f'{n}, '
+    return f'Hi {strname}!'
   return 'todo'
 
-hi(name='Mom')
-hi('Mom')
-hi('')
-hi()
-hi(None)
 #endregion bailam
 
