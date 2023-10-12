@@ -44,7 +44,15 @@ def hi(name=None,*args):
       else:
         strname += f'{n}, '
     return f'Hi {strname}!'
-  return 'todo'
 
+
+print(hi(name='Mom'))
+print(hi('Mom'))
+print(hi(''))
+print(hi())
+print(hi(None))
+print(hi('Mom', 'Dad'))
+print(hi('A', 'B', 'C'))
+print(hi('1', '22', '333', '4444'))
 #endregion bailam
 
